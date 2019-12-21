@@ -1,0 +1,403 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Network | Cying</title><meta name="description" content="Network"><meta name="keywords" content="Network"><meta name="author" content="Cying"><meta name="copyright" content="Cying"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Network"><meta name="twitter:description" content="Network"><meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1576944146129&amp;di=228d10d69063226d2ebced963c1f97de&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D1735485149%2C3987070624%26fm%3D214%26gp%3D0.jpg"><meta property="og:type" content="article"><meta property="og:title" content="Network"><meta property="og:url" content="http://yoursite.com/2019/12/21/Network/"><meta property="og:site_name" content="Cying"><meta property="og:description" content="Network"><meta property="og:image" content="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1576944146129&amp;di=228d10d69063226d2ebced963c1f97de&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D1735485149%2C3987070624%26fm%3D214%26gp%3D0.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://yoursite.com/2019/12/21/Network/"><link rel="next" title="Unity And Vuforia" href="http://yoursite.com/2019/12/14/Unity-And-Vuforia/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight_copy: 'false',
+  highlight_lang: 'false',
+  highlight_shrink: 'false',
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  copyright: undefined,
+  copy_copyright_js: false,
+  ClickShowText: undefined,
+  medium_zoom: 'false',
+  Snackbar: undefined
+  
+}</script><meta name="generator" content="Hexo 4.1.1"></head><body><div id="header"> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Cying</a></span><i class="fa fa-bars fa-fw toggle-menu pull_right close" aria-hidden="true"></i><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div></div></span><span class="pull_right" id="search_button"></span></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="lazyload avatar_img" src="https://profile.csdnimg.cn/6/B/F/1_cyingk" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item is_center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">5</div></a></div></div><div class="mobile_data_item is_center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">5</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目录</div><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#一、基本知识"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">一、基本知识</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#1-计算机网络的概念"><span class="toc_mobile_items-number">1.1.</span> <span class="toc_mobile_items-text">1.计算机网络的概念</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#2-计算机网络的功能"><span class="toc_mobile_items-number">1.2.</span> <span class="toc_mobile_items-text">2.计算机网络的功能</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#3-计算机网络的组成"><span class="toc_mobile_items-number">1.3.</span> <span class="toc_mobile_items-text">3.计算机网络的组成</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#组成部分"><span class="toc_mobile_items-number">1.3.1.</span> <span class="toc_mobile_items-text">- 组成部分</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#工作方式"><span class="toc_mobile_items-number">1.3.2.</span> <span class="toc_mobile_items-text">- 工作方式</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#功能组成"><span class="toc_mobile_items-number">1.3.3.</span> <span class="toc_mobile_items-text">- 功能组成</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#4-计算机网络的分类"><span class="toc_mobile_items-number">1.4.</span> <span class="toc_mobile_items-text">4.计算机网络的分类</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#按分布范围分"><span class="toc_mobile_items-number">1.4.1.</span> <span class="toc_mobile_items-text">- 按分布范围分</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#按使用者分"><span class="toc_mobile_items-number">1.4.2.</span> <span class="toc_mobile_items-text">- 按使用者分</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#按交换技术分"><span class="toc_mobile_items-number">1.4.3.</span> <span class="toc_mobile_items-text">- 按交换技术分</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#按拓扑结构"><span class="toc_mobile_items-number">1.4.4.</span> <span class="toc_mobile_items-text">- 按拓扑结构</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#按传输技术分"><span class="toc_mobile_items-number">1.4.5.</span> <span class="toc_mobile_items-text">- 按传输技术分</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#5-计算机网络的性能指标"><span class="toc_mobile_items-number">1.5.</span> <span class="toc_mobile_items-text">5.计算机网络的性能指标</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#速率"><span class="toc_mobile_items-number">1.5.1.</span> <span class="toc_mobile_items-text">- 速率</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#带宽"><span class="toc_mobile_items-number">1.5.2.</span> <span class="toc_mobile_items-text">- 带宽</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#吞吐量"><span class="toc_mobile_items-number">1.5.3.</span> <span class="toc_mobile_items-text">- 吞吐量</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#时延"><span class="toc_mobile_items-number">1.5.4.</span> <span class="toc_mobile_items-text">- 时延</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#时延带宽积"><span class="toc_mobile_items-number">1.5.5.</span> <span class="toc_mobile_items-text">- 时延带宽积</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#往返时延RTT"><span class="toc_mobile_items-number">1.5.6.</span> <span class="toc_mobile_items-text">- 往返时延RTT</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#利用率"><span class="toc_mobile_items-number">1.5.7.</span> <span class="toc_mobile_items-text">- 利用率</span></a></li></ol></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#二、分层结构"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">二、分层结构</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#发送文件前要完成的工作"><span class="toc_mobile_items-number">2.0.1.</span> <span class="toc_mobile_items-text">发送文件前要完成的工作</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#1-为什么要分层？"><span class="toc_mobile_items-number">2.1.</span> <span class="toc_mobile_items-text">1.为什么要分层？</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#2-分层的基本原则"><span class="toc_mobile_items-number">2.2.</span> <span class="toc_mobile_items-text">2.分层的基本原则</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#3-分层的专用术语"><span class="toc_mobile_items-number">2.3.</span> <span class="toc_mobile_items-text">3.分层的专用术语</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#实体"><span class="toc_mobile_items-number">2.3.1.</span> <span class="toc_mobile_items-text">- 实体</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#协议"><span class="toc_mobile_items-number">2.3.2.</span> <span class="toc_mobile_items-text">- 协议</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#接口（访问服务点SAP）"><span class="toc_mobile_items-number">2.3.3.</span> <span class="toc_mobile_items-text">- 接口（访问服务点SAP）</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#服务"><span class="toc_mobile_items-number">2.3.4.</span> <span class="toc_mobile_items-text">- 服务</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#协议数据单元-PDU"><span class="toc_mobile_items-number">2.3.5.</span> <span class="toc_mobile_items-text">- 协议数据单元 PDU</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#4-OSI参考模型"><span class="toc_mobile_items-number">2.4.</span> <span class="toc_mobile_items-text">4.OSI参考模型</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#应用层Application-Layer"><span class="toc_mobile_items-number">2.4.1.</span> <span class="toc_mobile_items-text">- 应用层Application Layer</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#表示层Presentation-Layer"><span class="toc_mobile_items-number">2.4.2.</span> <span class="toc_mobile_items-text">- 表示层Presentation Layer</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#会话层Session-Layer"><span class="toc_mobile_items-number">2.4.3.</span> <span class="toc_mobile_items-text">- 会话层Session Layer</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#传输层Transport-Layer"><span class="toc_mobile_items-number">2.4.4.</span> <span class="toc_mobile_items-text">- 传输层Transport Layer</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#网络层Network-Layer"><span class="toc_mobile_items-number">2.4.5.</span> <span class="toc_mobile_items-text">- 网络层Network Layer</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#数据链路层Datalink-Layer"><span class="toc_mobile_items-number">2.4.6.</span> <span class="toc_mobile_items-text">- 数据链路层Datalink Layer</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#物理层Physical-Layer"><span class="toc_mobile_items-number">2.4.7.</span> <span class="toc_mobile_items-text">- 物理层Physical Layer</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#5-TCP-IP模型"><span class="toc_mobile_items-number">2.5.</span> <span class="toc_mobile_items-text">5.TCP&#x2F;IP模型</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#与OSI参考模型的相同点"><span class="toc_mobile_items-number">2.5.1.</span> <span class="toc_mobile_items-text">与OSI参考模型的相同点</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#与OSI参考模型的不同点"><span class="toc_mobile_items-number">2.5.2.</span> <span class="toc_mobile_items-text">与OSI参考模型的不同点</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#物理层Physical-Layer-1"><span class="toc_mobile_items-number">2.5.3.</span> <span class="toc_mobile_items-text">- 物理层Physical Layer</span></a></li></ol></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#三、物理层"><span class="toc_mobile_items-number">3.</span> <span class="toc_mobile_items-text">三、物理层</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#1-数据通信的基础知识"><span class="toc_mobile_items-number">3.1.</span> <span class="toc_mobile_items-text">1.数据通信的基础知识</span></a></li></ol></li></ol></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、基本知识"><span class="toc-number">1.</span> <span class="toc-text">一、基本知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-计算机网络的概念"><span class="toc-number">1.1.</span> <span class="toc-text">1.计算机网络的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-计算机网络的功能"><span class="toc-number">1.2.</span> <span class="toc-text">2.计算机网络的功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-计算机网络的组成"><span class="toc-number">1.3.</span> <span class="toc-text">3.计算机网络的组成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#组成部分"><span class="toc-number">1.3.1.</span> <span class="toc-text">- 组成部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#工作方式"><span class="toc-number">1.3.2.</span> <span class="toc-text">- 工作方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#功能组成"><span class="toc-number">1.3.3.</span> <span class="toc-text">- 功能组成</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-计算机网络的分类"><span class="toc-number">1.4.</span> <span class="toc-text">4.计算机网络的分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#按分布范围分"><span class="toc-number">1.4.1.</span> <span class="toc-text">- 按分布范围分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#按使用者分"><span class="toc-number">1.4.2.</span> <span class="toc-text">- 按使用者分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#按交换技术分"><span class="toc-number">1.4.3.</span> <span class="toc-text">- 按交换技术分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#按拓扑结构"><span class="toc-number">1.4.4.</span> <span class="toc-text">- 按拓扑结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#按传输技术分"><span class="toc-number">1.4.5.</span> <span class="toc-text">- 按传输技术分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-计算机网络的性能指标"><span class="toc-number">1.5.</span> <span class="toc-text">5.计算机网络的性能指标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#速率"><span class="toc-number">1.5.1.</span> <span class="toc-text">- 速率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#带宽"><span class="toc-number">1.5.2.</span> <span class="toc-text">- 带宽</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#吞吐量"><span class="toc-number">1.5.3.</span> <span class="toc-text">- 吞吐量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时延"><span class="toc-number">1.5.4.</span> <span class="toc-text">- 时延</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时延带宽积"><span class="toc-number">1.5.5.</span> <span class="toc-text">- 时延带宽积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#往返时延RTT"><span class="toc-number">1.5.6.</span> <span class="toc-text">- 往返时延RTT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用率"><span class="toc-number">1.5.7.</span> <span class="toc-text">- 利用率</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、分层结构"><span class="toc-number">2.</span> <span class="toc-text">二、分层结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#发送文件前要完成的工作"><span class="toc-number">2.0.1.</span> <span class="toc-text">发送文件前要完成的工作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-为什么要分层？"><span class="toc-number">2.1.</span> <span class="toc-text">1.为什么要分层？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-分层的基本原则"><span class="toc-number">2.2.</span> <span class="toc-text">2.分层的基本原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-分层的专用术语"><span class="toc-number">2.3.</span> <span class="toc-text">3.分层的专用术语</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#实体"><span class="toc-number">2.3.1.</span> <span class="toc-text">- 实体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#协议"><span class="toc-number">2.3.2.</span> <span class="toc-text">- 协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#接口（访问服务点SAP）"><span class="toc-number">2.3.3.</span> <span class="toc-text">- 接口（访问服务点SAP）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务"><span class="toc-number">2.3.4.</span> <span class="toc-text">- 服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#协议数据单元-PDU"><span class="toc-number">2.3.5.</span> <span class="toc-text">- 协议数据单元 PDU</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-OSI参考模型"><span class="toc-number">2.4.</span> <span class="toc-text">4.OSI参考模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#应用层Application-Layer"><span class="toc-number">2.4.1.</span> <span class="toc-text">- 应用层Application Layer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表示层Presentation-Layer"><span class="toc-number">2.4.2.</span> <span class="toc-text">- 表示层Presentation Layer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#会话层Session-Layer"><span class="toc-number">2.4.3.</span> <span class="toc-text">- 会话层Session Layer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#传输层Transport-Layer"><span class="toc-number">2.4.4.</span> <span class="toc-text">- 传输层Transport Layer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络层Network-Layer"><span class="toc-number">2.4.5.</span> <span class="toc-text">- 网络层Network Layer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据链路层Datalink-Layer"><span class="toc-number">2.4.6.</span> <span class="toc-text">- 数据链路层Datalink Layer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#物理层Physical-Layer"><span class="toc-number">2.4.7.</span> <span class="toc-text">- 物理层Physical Layer</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-TCP-IP模型"><span class="toc-number">2.5.</span> <span class="toc-text">5.TCP&#x2F;IP模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#与OSI参考模型的相同点"><span class="toc-number">2.5.1.</span> <span class="toc-text">与OSI参考模型的相同点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#与OSI参考模型的不同点"><span class="toc-number">2.5.2.</span> <span class="toc-text">与OSI参考模型的不同点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#物理层Physical-Layer-1"><span class="toc-number">2.5.3.</span> <span class="toc-text">- 物理层Physical Layer</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、物理层"><span class="toc-number">3.</span> <span class="toc-text">三、物理层</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-数据通信的基础知识"><span class="toc-number">3.1.</span> <span class="toc-text">1.数据通信的基础知识</span></a></li></ol></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1576225629919&amp;di=7ba0d070eae2f9b4c47dbc594874f4b5&amp;imgtype=0&amp;src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F738b4710b912c8fcf25c5682ff039245d78821d5.jpg)"><div id="post-info"><div id="post-title"><div class="posttitle">Network</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-12-21</time><div class="post-meta-wordcount"><i class="fa fa-eye post-meta__icon" aria-hidden="true">       </i><span>阅读量: </span><span id="busuanzi_value_page_pv"></span></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><h1 id="一、基本知识"><a href="#一、基本知识" class="headerlink" title="一、基本知识"></a>一、基本知识</h1><h2 id="1-计算机网络的概念"><a href="#1-计算机网络的概念" class="headerlink" title="1.计算机网络的概念"></a>1.计算机网络的概念</h2><blockquote>
+<p>使一个将分散的、具有独立功能的<strong>计算机系统</strong>，通过<strong>通信设备</strong>与<strong>线路</strong>连接起来，由功能完善的<strong>软件</strong>实现<strong>资源共享</strong>和<strong>信息传递</strong>。是<strong>互联</strong>的、<strong>自治</strong>计算机集合</p>
+</blockquote>
+<h2 id="2-计算机网络的功能"><a href="#2-计算机网络的功能" class="headerlink" title="2.计算机网络的功能"></a>2.计算机网络的功能</h2><blockquote>
+<ul>
+<li><strong>数据通信</strong><code>Data Communicaions</code> – 连通性</li>
+<li><strong>资源共享</strong><code>Resource Sharing</code> – 硬件、软件、数据</li>
+<li>分布式处理 – 多台计算机各自承担同一工作任务的不同部分</li>
+<li>提高可靠性</li>
+<li>负载均衡</li>
+</ul>
+</blockquote>
+<h2 id="3-计算机网络的组成"><a href="#3-计算机网络的组成" class="headerlink" title="3.计算机网络的组成"></a>3.计算机网络的组成</h2><h3 id="组成部分"><a href="#组成部分" class="headerlink" title="- 组成部分"></a>- 组成部分</h3><blockquote>
+<ul>
+<li>硬件<code>Hardware</code>、软件<code>Software</code>、协议<code>Protocol</code></li>
+</ul>
+</blockquote>
+<h3 id="工作方式"><a href="#工作方式" class="headerlink" title="- 工作方式"></a>- 工作方式</h3><blockquote>
+<ul>
+<li>边缘部分 – 用户直接使用<ul>
+<li><code>C/S</code>方式</li>
+<li><code>P2P</code> 方式</li>
+</ul>
+</li>
+<li>核心部分 – 为边缘部分服务</li>
+</ul>
+</blockquote>
+<h3 id="功能组成"><a href="#功能组成" class="headerlink" title="- 功能组成"></a>- 功能组成</h3><blockquote>
+<ul>
+<li>通信子网<code>Communication  Subnet</code>– 实现<strong>数据通信</strong><ul>
+<li>应用层、表示层、会话层</li>
+</ul>
+</li>
+<li>资源子网<code>Resource Subnet</code> – 实现<strong>资源共享</strong>/数据处理<ul>
+<li>网络层、数据链路层、物理层</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="4-计算机网络的分类"><a href="#4-计算机网络的分类" class="headerlink" title="4.计算机网络的分类"></a>4.计算机网络的分类</h2><h3 id="按分布范围分"><a href="#按分布范围分" class="headerlink" title="- 按分布范围分"></a>- 按分布范围分</h3><blockquote>
+<ul>
+<li>广域网 <code>WAN</code></li>
+<li>城域网 <code>MAN</code></li>
+<li>局域网 <code>LAN</code></li>
+<li>个人局域网 <code>PAN</code></li>
+</ul>
+</blockquote>
+<h3 id="按使用者分"><a href="#按使用者分" class="headerlink" title="- 按使用者分"></a>- 按使用者分</h3><blockquote>
+<ul>
+<li>专用网</li>
+<li>公用网</li>
+</ul>
+</blockquote>
+<h3 id="按交换技术分"><a href="#按交换技术分" class="headerlink" title="- 按交换技术分"></a>- 按交换技术分</h3><blockquote>
+<ul>
+<li>电路交换</li>
+<li>报文交换</li>
+<li>分组交换</li>
+</ul>
+</blockquote>
+<h3 id="按拓扑结构"><a href="#按拓扑结构" class="headerlink" title="- 按拓扑结构"></a>- 按拓扑结构</h3><blockquote>
+<ul>
+<li>总线型</li>
+<li>星型</li>
+<li>环型</li>
+<li>网状型</li>
+</ul>
+</blockquote>
+<h3 id="按传输技术分"><a href="#按传输技术分" class="headerlink" title="- 按传输技术分"></a>- 按传输技术分</h3><blockquote>
+<ul>
+<li>广播式网络 – 共享公共通信信道</li>
+<li>点对点网络 – 使用<strong>分组存储转发</strong>和<strong>路由选择</strong>机制</li>
+</ul>
+</blockquote>
+<h2 id="5-计算机网络的性能指标"><a href="#5-计算机网络的性能指标" class="headerlink" title="5.计算机网络的性能指标"></a>5.计算机网络的性能指标</h2><h3 id="速率"><a href="#速率" class="headerlink" title="- 速率"></a>- 速率</h3><blockquote>
+<p>即<strong>数据率</strong>或<strong>数据传输率</strong>或<strong>比特率</strong></p>
+</blockquote>
+<h3 id="带宽"><a href="#带宽" class="headerlink" title="- 带宽"></a>- 带宽</h3><blockquote>
+<p>原本指某个信号具有的频带宽度，即最高频率与最低频率之差，单位是<strong>赫兹</strong> Hz，在计算机网络中，用来表示网络的通信线路传送数据的能力，通常是指单位时间内从网络中的某一点到另一点所能通过的<strong>最高数据率</strong>。单位是<strong>比特每秒</strong>，<code>b/s</code>，<code>kb/s</code>，<code>Mb/s</code>，<code>Gb/s</code></p>
+</blockquote>
+<h3 id="吞吐量"><a href="#吞吐量" class="headerlink" title="- 吞吐量"></a>- 吞吐量</h3><blockquote>
+<p>表示在<strong>单位时间</strong>内通过<strong>某个网络（或信道/接口）</strong>的数据量，受网络的带宽和网络的额定速率的限制</p>
+</blockquote>
+<h3 id="时延"><a href="#时延" class="headerlink" title="- 时延"></a>- 时延</h3><blockquote>
+<p>指数据（报文/分组/比特流）从网络的一端传送到另一端所需的时间。也叫<strong>延迟</strong>或<strong>迟延</strong>，单位是<code>s</code></p>
+<ul>
+<li><p>发送时延</p>
+<ul>
+<li>从主机上将数据全部放在信道上所需的时间</li>
+</ul>
+</li>
+<li><p>传播时延</p>
+<ul>
+<li>是数据在信道中传输所需的时间</li>
+</ul>
+</li>
+<li><p>排队时延</p>
+<ul>
+<li>在路由器转发中所等待的时间</li>
+</ul>
+</li>
+<li><p>处理时延</p>
+<ul>
+<li>路由器在对数据进行检错等处理时所需的时间</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="- 时延带宽积"></a>- 时延带宽积</h3><blockquote>
+<p>又称<strong>比特为单位的链路长度</strong>，某段链路现在有多少比特。– 时延带宽积（<code>bit</code>） = 传播时延（<code>s</code>） × 带宽（<code>b/s</code>）</p>
+</blockquote>
+<h3 id="往返时延RTT"><a href="#往返时延RTT" class="headerlink" title="- 往返时延RTT"></a>- 往返时延<code>RTT</code></h3><blockquote>
+<p>从发送方发送数据开始，到发送方收到接收方的确认（接收方收到数据后立刻发送确认），总经历的时延，<strong>RTT</strong>越大，在收到确认之前可以发送的数据越多</p>
+<ul>
+<li>往返传播时延 = 传播时延 × 2</li>
+<li>末端处理时间</li>
+</ul>
+</blockquote>
+<h3 id="利用率"><a href="#利用率" class="headerlink" title="- 利用率"></a>- 利用率</h3><blockquote>
+<ul>
+<li>信道利用率</li>
+<li>网络利用率</li>
+</ul>
+</blockquote>
+<h1 id="二、分层结构"><a href="#二、分层结构" class="headerlink" title="二、分层结构"></a>二、分层结构</h1><blockquote>
+<h3 id="发送文件前要完成的工作"><a href="#发送文件前要完成的工作" class="headerlink" title="发送文件前要完成的工作"></a>发送文件前要完成的工作</h3><hr>
+<ul>
+<li>发起通信的计算机必须将<strong>数据通信</strong>的通路进行<strong>激活</strong></li>
+<li>要告诉网络如何识别<strong>目的主机</strong></li>
+<li>发起通信的计算机要查明目的主机<strong>是否开机</strong>，并且<strong>与网络连接正常</strong></li>
+<li>发起通信的计算机要弄清楚，对方计算机中的<strong>文件管理程序</strong>是否已经做好准备工作</li>
+<li>确保<strong>差错</strong>和<strong>意外</strong>可以解决</li>
+</ul>
+</blockquote>
+<h2 id="1-为什么要分层？"><a href="#1-为什么要分层？" class="headerlink" title="1.为什么要分层？"></a>1.为什么要分层？</h2><blockquote>
+<p>从<strong>发送文件前要完成的工作</strong>中可以感受到，任务比较多、杂，所以就有了分层的概念</p>
+</blockquote>
+<h2 id="2-分层的基本原则"><a href="#2-分层的基本原则" class="headerlink" title="2.分层的基本原则"></a>2.分层的<strong>基本原则</strong></h2><blockquote>
+<ul>
+<li>各层之间相互<strong>独立</strong>，每层只实现一种相对独立的功能</li>
+<li>每层之间<strong>界限自然清晰</strong>，易于理解，相互交流尽可能少</li>
+<li>结构上可以分隔开，每层都采用<strong>最合适的技术</strong>来实现</li>
+<li>保持<strong>下层</strong>对<strong>上层</strong>的独立性，下层向上层提供服务，上层使用下层所提供的服务</li>
+<li>整个分层结构应该能促进标准化工作</li>
+</ul>
+</blockquote>
+<h2 id="3-分层的专用术语"><a href="#3-分层的专用术语" class="headerlink" title="3.分层的专用术语"></a>3.分层的专用术语</h2><h3 id="实体"><a href="#实体" class="headerlink" title="- 实体"></a>- 实体</h3><blockquote>
+<p>第n层中的活动元素称为<strong>n层实体</strong>，同一层的实体叫<strong>对等实体</strong></p>
+</blockquote>
+<h3 id="协议"><a href="#协议" class="headerlink" title="- 协议"></a>- 协议</h3><blockquote>
+<p>为进行网络中的<strong>对等实体</strong>数据交换而建立的规则、标准或规定成为网络协议</p>
+<ul>
+<li>语法 – 规定传输数据的格式</li>
+<li>语义 – 规定所要完成的功能</li>
+<li>同步 – 规定各种操作的顺序</li>
+</ul>
+</blockquote>
+<h3 id="接口（访问服务点SAP）"><a href="#接口（访问服务点SAP）" class="headerlink" title="- 接口（访问服务点SAP）"></a>- 接口（访问服务点<code>SAP</code>）</h3><blockquote>
+<p>上层使用下层服务的入口</p>
+</blockquote>
+<h3 id="服务"><a href="#服务" class="headerlink" title="- 服务"></a>- 服务</h3><blockquote>
+<p>下层为相邻上层提供的功能调用</p>
+</blockquote>
+<h3 id="协议数据单元-PDU"><a href="#协议数据单元-PDU" class="headerlink" title="- 协议数据单元 PDU"></a>- 协议数据单元 <code>PDU</code></h3><blockquote>
+<p>对等层之间传送的数据单元 <code>PDU</code> = <code>PCI</code> + <code>SDU</code></p>
+<ul>
+<li>服务数据单元<code>SDU</code>：为完成用户所要求的功能而应传送的数据</li>
+<li>协议控制信息<code>PCI</code>：控制协议操作的信息</li>
+</ul>
+</blockquote>
+<h2 id="4-OSI参考模型"><a href="#4-OSI参考模型" class="headerlink" title="4.OSI参考模型"></a>4.OSI参考模型</h2><blockquote>
+<p>目的：支持<strong>异构网络系统</strong>的互联互通</p>
+<p>国际标准化组织（<code>ISO</code>)于1984年提出开放系统互连（<code>ISO</code>）参考模型</p>
+</blockquote>
+<h3 id="应用层Application-Layer"><a href="#应用层Application-Layer" class="headerlink" title="- 应用层Application Layer"></a>- 应用层<code>Application Layer</code></h3><blockquote>
+<p>所有能和用户交互产生网络流量的程序</p>
+<p>典型的服务：</p>
+<ul>
+<li>文件传输 – <code>FTP</code></li>
+<li>电子邮件 – <code>SMTP</code></li>
+<li>万维网 – <code>HTTP</code></li>
+</ul>
+</blockquote>
+<h3 id="表示层Presentation-Layer"><a href="#表示层Presentation-Layer" class="headerlink" title="- 表示层Presentation Layer"></a>- 表示层<code>Presentation Layer</code></h3><blockquote>
+<p>用于处理在两个通信系统中交换信息的表示方式（<strong>语法</strong>和<strong>语义</strong>）</p>
+<p>功能： </p>
+<ul>
+<li>数据格式变换</li>
+<li>数据加密解密</li>
+<li>数据压缩恢复</li>
+</ul>
+</blockquote>
+<h3 id="会话层Session-Layer"><a href="#会话层Session-Layer" class="headerlink" title="- 会话层Session Layer"></a>- 会话层<code>Session Layer</code></h3><blockquote>
+<p>向表示层实体/用户进程提供<strong>建立连接</strong>并在连接上<strong>有序地传输数据</strong>，这是会话，也是<strong>建立同步</strong>（<code>SYN</code>）</p>
+<p>功能： </p>
+<ul>
+<li>建立、管理、终止会话</li>
+<li>使用校验点可使会话在通信失效时从<strong>校验点/同步点</strong>继续恢复通信，实现数据同步</li>
+</ul>
+<p>主要协议： </p>
+<ul>
+<li><code>ADSP</code></li>
+<li><code>ASP</code></li>
+</ul>
+</blockquote>
+<h3 id="传输层Transport-Layer"><a href="#传输层Transport-Layer" class="headerlink" title="- 传输层Transport Layer"></a>- 传输层<code>Transport Layer</code></h3><blockquote>
+<p>负责主机中<strong>两个进程</strong>的通信，即<strong>端到端</strong>的通信。传输单位是报文段或用户数据报</p>
+<p>功能： </p>
+<ul>
+<li>可靠传输、不可靠传输</li>
+<li>差错控制</li>
+<li>流量控制</li>
+<li>复用分用<ul>
+<li>复用 – 多个应用进程可同时使用下面传输层的服务</li>
+<li>分用 – 运输层把收到的信息分别交付给上面的应用层中相应的进程</li>
+</ul>
+</li>
+</ul>
+<p>主要协议：</p>
+<ul>
+<li>TCP</li>
+<li>UDP</li>
+</ul>
+</blockquote>
+<h3 id="网络层Network-Layer"><a href="#网络层Network-Layer" class="headerlink" title="- 网络层Network Layer"></a>- 网络层<code>Network Layer</code></h3><blockquote>
+<p>主要任务是把<strong>分组</strong>从源端传到目的端，为分组交换网上的不同主机提供通信服务。网络层传输单位是<strong>数据报</strong></p>
+<p>功能：</p>
+<ul>
+<li>路由选择</li>
+<li>流量控制</li>
+<li>差错控制</li>
+<li>拥塞控制</li>
+</ul>
+<p>主要协议</p>
+<ul>
+<li>IP</li>
+<li>IPX</li>
+<li>ICMP</li>
+<li>IGMP</li>
+<li>ARP</li>
+<li>RARP</li>
+<li>OSPF</li>
+</ul>
+</blockquote>
+<h3 id="数据链路层Datalink-Layer"><a href="#数据链路层Datalink-Layer" class="headerlink" title="- 数据链路层Datalink Layer"></a>- 数据链路层<code>Datalink Layer</code></h3><blockquote>
+<p>主要任务是把网络层传下来的数据报组装成帧。</p>
+<p>功能：</p>
+<ul>
+<li>成帧（定义帧的开始和结束）</li>
+<li>差错控制</li>
+<li>流量控制</li>
+<li>访问控制 – 控制对信道的访问</li>
+</ul>
+<p>主要协议：</p>
+<ul>
+<li>SDLC</li>
+<li>HDLC</li>
+<li>PPP</li>
+<li>STP</li>
+</ul>
+</blockquote>
+<h3 id="物理层Physical-Layer"><a href="#物理层Physical-Layer" class="headerlink" title="- 物理层Physical Layer"></a>- 物理层<code>Physical Layer</code></h3><blockquote>
+<p>主要任务就是在<strong>物理媒体</strong>上实现比特流的<strong>透明传输</strong>（不管所传的是什么样的比特组合，都应当能够在链路上传送），传输单位是<strong>bit</strong></p>
+<p>功能：</p>
+<ul>
+<li>定义接口特性</li>
+<li>定义传输模式<ul>
+<li>单工</li>
+<li>半双工</li>
+<li>双工</li>
+</ul>
+</li>
+<li>定义传输速率</li>
+<li>比特同步</li>
+<li>比特编码</li>
+</ul>
+<p>主要协议：</p>
+<ul>
+<li>RJ45</li>
+<li>802.3</li>
+</ul>
+</blockquote>
+<h2 id="5-TCP-IP模型"><a href="#5-TCP-IP模型" class="headerlink" title="5.TCP/IP模型"></a>5.TCP/IP模型</h2><blockquote>
+<h3 id="与OSI参考模型的相同点"><a href="#与OSI参考模型的相同点" class="headerlink" title="与OSI参考模型的相同点"></a>与OSI参考模型的相同点</h3><ul>
+<li>都分层</li>
+<li>基于独立的协议栈的概念</li>
+<li>可以实现异构网络的互联</li>
+</ul>
+</blockquote>
+<blockquote>
+<h3 id="与OSI参考模型的不同点"><a href="#与OSI参考模型的不同点" class="headerlink" title="与OSI参考模型的不同点"></a>与OSI参考模型的不同点</h3><ul>
+<li><p><code>OSI</code>定义了三点：服务、协议、接口</p>
+</li>
+<li><p><code>OSI</code>先出现，参考模型先于协议出现，不偏向特定协议</p>
+</li>
+<li><p><code>TCP/IP</code>设计之初就考虑到异构互联网的问题，将<code>IP</code>作为重要层次</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">OSI</th>
+<th align="center">TCP/IP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">网络层</td>
+<td align="center">无连接+面向连接</td>
+<td align="center">无连接</td>
+</tr>
+<tr>
+<td align="center">传输层</td>
+<td align="center">面向连接</td>
+<td align="center">无连接+面向连接</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</blockquote>
+<h3 id="物理层Physical-Layer-1"><a href="#物理层Physical-Layer-1" class="headerlink" title="- 物理层Physical Layer"></a>- 物理层<code>Physical Layer</code></h3><blockquote>
+<p>解决如何在连接各种计算机的传输媒体上<strong>传输数据比特流</strong>，而不是指具体的传输媒体。</p>
+<p>主要任务：</p>
+<ul>
+<li>确定与传输媒体<strong>接口</strong>有关的一些特性<ul>
+<li>机械特性：定义物理连接的特性，规定物理连接时所采用的规格、接口形状、<strong>引线数目</strong>、<strong>引脚数量</strong>和排列情况</li>
+<li>电器特性：规定传输二进制位时，线路上信号的<strong>电压范围</strong>、阻抗匹配、传输<strong>速率</strong>和<strong>距离</strong>限制等</li>
+<li>功能特性：指明某条线上出现的某一<strong>电平表示的含义</strong>，接口不见的信号线的用途</li>
+<li>规程特性：（过程）定义各条物理线路的工作<strong>规程和时序</strong>关系</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h1 id="三、物理层"><a href="#三、物理层" class="headerlink" title="三、物理层"></a>三、物理层</h1><h2 id="1-数据通信的基础知识"><a href="#1-数据通信的基础知识" class="headerlink" title="1.数据通信的基础知识"></a>1.数据通信的基础知识</h2></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Cying</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2019/12/21/Network/">http://yoursite.com/2019/12/21/Network/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com">Cying</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Network/">Network    </a></div><div class="post_share"><div class="social-share" data-image="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1576944146129&amp;di=228d10d69063226d2ebced963c1f97de&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D1735485149%2C3987070624%26fm%3D214%26gp%3D0.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2019/12/14/Unity-And-Vuforia/"><img class="next_cover lazyload" data-src="https://img-blog.csdnimg.cn/20191214203032844.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>Unity And Vuforia</span></div></a></div></nav></div></div><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2019 By Cying</div><div class="framework-info"><span>驱动 </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/third-party/click_heart.js"></script></body></html>
